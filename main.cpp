@@ -2,7 +2,7 @@
 // EE 312 Fall 2018
 //
 // The BST should work for any data type or object.
-// Other user created objects must have the << operator overloaded for 
+// Other user created objects must have the << operator overloaded for
 // output.
 //
 
@@ -25,7 +25,7 @@ int main() {
     inFile.open("test.txt");
 
     BST_312<string> bst;
-   
+
     string s;
     inFile >> s;
     while (inFile) {;
@@ -48,12 +48,13 @@ int main() {
 
     cout << "Remove items " << endl;
     cout << "number of nodes in tree before delete is " << bst.countNodes() << endl;
-    s = "tree";
+    s = "1";
+    cout << "true/false: " <<bst.isItemInTree(s) << endl;
     bst.deleteItem(s);
+    bst.makeEmpty();
     print(bst.postOrderTraversal());
     cout << endl;
     cout << "number of nodes in tree after delete is " << bst.countNodes() << endl;
     cout << endl;
 
 }
-
